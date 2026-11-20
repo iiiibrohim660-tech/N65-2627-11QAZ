@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N65-2027-11Ә | Bizning sinf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="#" data-go="home">
+        <span class="logo-icon">N65</span>
+        <span>
+            <strong>Bizning sinf</strong>
+            <small>2027-11Ә</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <button class="nav-link active" data-page="home">Bosh sahifa</button>
+        <button class="nav-link" data-page="students">O‘quvchilar</button>
+        <button class="nav-link" data-page="classmates">Sinfdoshlar bilan</button>
+        <button class="nav-link" data-page="teachers">Muallimlar</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- BOSH SAHIFA -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">BIZNING SINF</span>
+                <h1>N65-2027-11Ә</h1>
+                <p>
+                    Birgalikdagi kunlarimiz, do‘stligimiz
+                    va unutilmas xotiralarimiz.
+                </p>
+                    <!--
+                <div class="hero-buttons">
+                    <button class="btn primary" data-go="students">
+                        O‘quvchilar →
+                    </button>
+                    <button class="btn secondary" data-go="classmates">
+                        Sinfdoshlar bilan →
+                    </button>
+                </div>-->
+            </div>
+
+            <div class="hero-decoration">
+                <div class="hero-card">
+                    <span>✦</span>
+                    <h2>Bir sinf —</h2>
+                    <h2>ming xotira</h2>
+                    <small>2027</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">BIZ HAQIMIZDA</span>
+                <h2>Bu — bizning kichik olamimiz</h2>
+                <p>
+                    Har bir o‘quvchi, har bir kun va har bir surat
+                    sinfimiz tarixining bir qismi.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>O‘quvchilar</h3>
+                    <p>
+                        Sinfimizdagi o‘quvchilar va
+                        ularning qiziqishlari bilan tanishing.
+                    </p>
+                    <button class="text-button" data-go="students">
+                        Ko‘rish →
+                    </button>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Sinfdoshlar bilan</h3>
+                    <p>
+                        Birgalikdagi suratlarimiz va
+                        unutilmas xotiralarimiz.
+                    </p>
+                    <button class="text-button" data-go="classmates">
+                        Ko‘rish →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- O‘QUVCHILAR -->
+    <section id="students" class="page">
+        <div class="page-banner">
+            <span class="eyebrow">BIZNING JAMOA</span>
+            <h1>O‘quvchilar</h1>
+            <p>
+                Har birimizning o‘z qiziqishimiz,
+                orzularimiz va maqsadlarimiz bor.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="section-title left">
+                <span class="eyebrow">15 NAFAR O‘QUVCHI</span>
+                <h2>Sinfdoshlarimiz bilan tanishing</h2>
+                <p>
+                    O‘quvchi suratini yoki ismini bosib,
+                    uning shaxsiy sahifasini oching.
+                </p>
+            </div>
+
+            <div id="studentList" class="student-grid"></div>
+        </div>
+    </section>
+
+
+    <!-- O‘QUVCHI PROFILI -->
+    <section id="profile" class="page">
+        <div class="container profile-container">
+            <button class="back-button" data-go="students">
+                ← O‘quvchilarga qaytish
+            </button>
+
+            <div id="profileContent"></div>
+        </div>
+    </section>
+
+
+    <!-- SINFDOSHLAR BILAN -->
+    <section id="classmates" class="page">
+        <div class="page-banner">
+            <span class="eyebrow">BIZNING XOTIRALAR</span>
+            <h1>Sinfdoshlar bilan</h1>
+            <p>
+                Birgalikda tushgan suratlarimiz.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="section-title left">
+                <h2>Birgalikdagi suratlar</h2>
+            </div>
+
+            <div id="classmatesGallery" class="memory-grid"></div>
+        </div>
+    </section>
+        <!-- SINFDOSHLAR ALBOMI (sinf1a.png, sinf1b.png ...) -->
+    <section id="classmatesAlbum" class="page">
+        <div class="page-banner">
+            <span class="eyebrow">BIZNING XOTIRALAR</span>
+            <h1>Sinfdoshlar bilan</h1>
+            <p>
+                Birgalikda tushgan suratlarimiz.
+            </p>
+        </div>
+
+        <div class="container">
+            <button class="back-button" data-go="classmates">
+                ← Sinfdoshlarga qaytish
+            </button>
+
+            <div class="section-title left">
+                <h2 id="albumTitle"></h2>
+            </div>
+
+            <div id="albumGrid" class="memory-grid"></div>
+        </div>
+    </section>
+
+
+    <!-- MUALLIMLAR -->
+    <section id="teachers" class="page">
+        <div class="page-banner">
+            <span class="eyebrow">BIZNING USTOZLARIMIZ</span>
+            <h1>Muallimlar</h1>
+            <p>
+                Bizga bilim va tarbiya berayotgan
+                aziz ustozlarimiz.
+            </p>
+        </div>
+
+        <div class="container">
+            <div id="teacherList" class="teacher-grid"></div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div>
+        <h3>N65-2027-11Ә</h3>
+        <p>Bir sinf — ming xotira.</p>
+        
+    </div>
+    <h2 id="from">From : _min_010_</h2>
+    <span>© <span id="year"></span> Bizning sinf</span>
+</footer>
+
+
+<!-- SURATNI KATTALASHTIRISH -->
+<div class="lightbox" id="lightbox">
+    <button id="lightboxClose" class="lightbox-close">×</button>
+    <img id="lightboxImage" src="" alt="Katta surat">
+    <p id="lightboxCaption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #142b4a;
+    --blue: #2864a8;
+    --sky: #eaf3fc;
+    --ink: #1d2b3c;
+    --muted: #718096;
+    --line: #e7edf4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background: #fbfcfe;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: white;
+    border-bottom: 1px solid var(--line);
+    min-height: 78px;
+    padding: 0 max(20px, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.logo-icon {
+    background: var(--navy);
+    color: white;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.logo strong {
+    display: block;
+    font-family: Manrope, sans-serif;
+}
+
+.logo small {
+    color: var(--muted);
+}
+
+nav {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-link {
+    border: 0;
+    background: transparent;
+    color: #596a7f;
+    padding: 12px 13px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue);
+    background: var(--sky);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: var(--sky);
+    color: var(--navy);
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+/* SAHIFALAR */
+
+.page {
+    display: none;
+    min-height: 65vh;
+}
+
+.page.active {
+    display: block;
+    animation: showPage .3s ease;
+}
+
+@keyframes showPage {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: min(1160px, calc(100% - 40px));
+    margin: auto;
+    padding: 70px 0;
+}
+
+
+/* BOSH SAHIFA */
+
+.hero {
+    min-height: 480px;
+    /*background: linear-gradient(120deg, #142b4a, #2864a8, #3479b7);*/
+    background-image: url("back1.png");
+    background-size: cover;
+    color: white;
+    padding: 70px max(6vw, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #4e91ce;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero .eyebrow,
+.page-banner .eyebrow {
+    color: #a9d5ff;
+}
+
+.hero h1 {
+    font-family: Manrope, sans-serif;
+    font-size: clamp(42px, 7vw, 76px);
+    letter-spacing: -3px;
+    margin: 15px 0;
+}
+
+.hero p {
+    color: #d7e7f7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.btn {
+    border: 0;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: white;
+    color: var(--navy);
+}
+
+.secondary {
+    background: rgba(255,255,255,.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.hero-decoration {
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.hero-card {
+    width: 220px;
+    height: 175px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 20px;
+    background: rgba(255,255,255,.13);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-card span {
+    color: #ffdb8a;
+    font-size: 25px;
+}
+
+.hero-card h2 {
+    font-size: 21px;
+    margin: 3px 0;
+    font-family: Manrope, sans-serif;
+}
+
+.hero-card small {
+    margin-top: 10px;
+    color: #c9e3fb;
+}
+
+
+/* SARLAVHALAR */
+
+.section-title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.section-title.left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.section-title h2,
+.gallery-title h2 {
+    font-family: Manrope, sans-serif;
+    font-size: clamp(25px, 4vw, 36px);
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(23,55,91,.04);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--sky);
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.feature-card h3 {
+    color: var(--navy);
+    margin: 20px 0 9px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.text-button {
+    border: 0;
+    background: none;
+    color: var(--blue);
+    font-weight: 800;
+    padding: 8px 0;
+}
+
+
+/* SAHIFA BANNER */
+
+.page-banner {
+    padding: 65px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #142b4a, #2864a8);
+}
+
+.page-banner h1 {
+    font: 800 clamp(38px, 6vw, 58px) Manrope, sans-serif;
+    margin: 12px 0;
+}
+
+.page-banner p {
+    color: #d6e7f8;
+    line-height: 1.7;
+}
+
+
+/* O‘QUVCHILAR */
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: white;
+    transition: .2s;
+    color: var(--ink);
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(23,55,91,.09);
+}
+
+.student-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: var(--sky);
+}
+
+.student-card-info {
+    padding: 15px;
+}
+
+.student-card-info span {
+    color: #6d9bc7;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.student-card-info h3 {
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 7px 0 0;
+}
+
+
+/* PROFIL */
+
+.profile-container {
+    padding-top: 40px;
+}
+
+.back-button {
+    border: 0;
+    background: var(--sky);
+    color: var(--blue);
+    border-radius: 9px;
+    padding: 11px 15px;
+    font-weight: 800;
+}
+
+.profile-header {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 35px;
+    align-items: center;
+    margin: 30px 0 40px;
+    padding: 28px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 14px 40px rgba(23,55,91,.09);
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 15px;
+    background: var(--sky);
+}
+
+.profile-header h1 {
+    color: var(--navy);
+    font: 800 clamp(27px,4vw,40px) Manrope, sans-serif;
+}
+
+.profile-header p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.profile-info-card {
+    padding: 23px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+}
+
+.profile-info-card h3 {
+    color: var(--navy);
+    margin-top: 0;
+}
+
+.profile-info-card p {
+    color: #66768a;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.profile-info-card:last-child {
+    grid-column: 1 / -1;
+}
+
+
+/* SHAXSIY SURATLAR */
+
+.personal-gallery {
+    grid-column: 1 / -1;
+    padding: 23px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+}
+
+.personal-gallery h3 {
+    color: var(--navy);
+    margin-top: 0;
+}
+
+.personal-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.personal-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--sky);
+    cursor: zoom-in;
+    transition: .2s;
+}
+
+.personal-photo:hover {
+    transform: scale(1.02);
+}
+
+
+/* SINFDOSHLAR GALEREYASI */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
+
+.memory-item {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    aspect-ratio: 4 / 3;
+    background: var(--sky);
+    cursor: zoom-in;
+}
+
+.memory-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .3s;
+}
+
+.memory-item:hover img {
+    transform: scale(1.06);
+}
+
+.memory-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 12px 12px;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    background: linear-gradient(transparent, rgba(10,25,44,.75));
+    z-index: 2;
+}
+
+
+/* MUALLIMLAR */
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.teacher-card {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 14px 40px rgba(23,55,91,.09);
+}
+
+.teacher-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    background: var(--sky);
+}
+
+.teacher-info {
+    padding: 23px;
+}
+
+.teacher-info span {
+    color: #4e91ce;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.teacher-info h2 {
+    color: var(--navy);
+    margin: 8px 0;
+}
+
+.teacher-info p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #122640;
+    color: white;
+    padding: 28px max(20px, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer h3 {
+    margin: 0;
+}
+
+.footer p,
+.footer span {
+    color: #aebed0;
+    font-size: 13px;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    padding: 55px 20px 25px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(7,16,29,.93);
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox p {
+    color: white;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 42px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .student-grid,
+    .memory-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-decoration {
+        opacity: .5;
+    }
+}
+
+@media (max-width: 680px) {
+    .header {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 12px 20px;
+        flex-direction: column;
+        border-bottom: 1px solid var(--line);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .nav-link {
+        text-align: left;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 60px 25px;
+    }
+
+    .hero-decoration {
+        position: absolute;
+        right: -200px;
+        opacity: .25;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+        padding: 50px 0;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-grid,
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .student-card-info {
+        padding: 12px;
+    }
+
+    .student-card-info h3 {
+        font-size: 13px;
+    }
+
+    .profile-header {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .profile-photo {
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .profile-sections,
+    .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info-card:last-child,
+    .personal-gallery {
+        grid-column: auto;
+    }
+
+    .personal-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ===== QO'SHIMCHA RESPONSIVE (yangi) ===== */
+/* TELEFONDA USTOZLAR: bir qatorda 2 tadan */
+@media (max-width: 680px) {
+    .teacher-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .teacher-card {
+        border-radius: 14px;
+    }
+
+    .teacher-info {
+        padding: 12px;
+    }
+
+    .teacher-info span {
+        font-size: 10px;
+        line-height: 1.4;
+        display: block;
+    }
+
+    .teacher-info h2 {
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 6px 0 0;
+    }
+}
+
+/* Juda kichik telefonlar */
+@media (max-width: 360px) {
+    .teacher-grid {
+        gap: 8px;
+    }
+
+    .teacher-info {
+        padding: 10px;
+    }
+
+    .teacher-info h2 {
+        font-size: 13px;
+    }
+}
