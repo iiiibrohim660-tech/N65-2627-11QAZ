@@ -756,7 +756,7 @@ document.getElementById("themeToggle").addEventListener("click", function () {
     dark.media = goDark ? "all" : "not all";
     blue.media = goDark ? "not all" : "all";
 
-    this.textContent = goDark ? "Ko‘k dizayn" : "Qorong‘u dizayn";
+    this.textContent = goDark ? "⇄" : "⇄";
 });
 
 
