@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N65-2027-11Ә | Bizning sinf</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Standart: ko'k dizayn. Qorong'u dizayn tugma bosilganda yoqiladi -->
+    <link id="themeBlue" rel="stylesheet" href="style.css">
+    <link id="themeDark" rel="stylesheet" href="dark.css" media="not all">
 </head>
 <body>
 
@@ -25,6 +26,7 @@
         <button class="nav-link" data-page="students">O‘quvchilar</button>
         <button class="nav-link" data-page="classmates">Sinfdoshlar bilan</button>
         <button class="nav-link" data-page="teachers">Muallimlar</button>
+        <button class="theme-toggle" id="themeToggle" type="button">🌙 Qorong‘u dizayn</button>
     </nav>
 </header>
 
@@ -40,7 +42,8 @@
                     Birgalikdagi kunlarimiz, do‘stligimiz
                     va unutilmas xotiralarimiz.
                 </p>
-                    <!--
+
+                <!--
                 <div class="hero-buttons">
                     <button class="btn primary" data-go="students">
                         O‘quvchilar →
@@ -48,7 +51,8 @@
                     <button class="btn secondary" data-go="classmates">
                         Sinfdoshlar bilan →
                     </button>
-                </div>-->
+                </div>
+                -->
             </div>
 
             <div class="hero-decoration">
@@ -156,7 +160,9 @@
             <div id="classmatesGallery" class="memory-grid"></div>
         </div>
     </section>
-        <!-- SINFDOSHLAR ALBOMI (sinf1a.png, sinf1b.png ...) -->
+
+
+    <!-- SINFDOSHLAR ALBOMI (sinf1a.png, sinf1b.png ...) -->
     <section id="classmatesAlbum" class="page">
         <div class="page-banner">
             <span class="eyebrow">BIZNING XOTIRALAR</span>
@@ -203,9 +209,10 @@
     <div>
         <h3>N65-2027-11Ә</h3>
         <p>Bir sinf — ming xotira.</p>
-        
     </div>
+
     <h2 id="from">From : _min_010_</h2>
+
     <span>© <span id="year"></span> Bizning sinf</span>
 </footer>
 
