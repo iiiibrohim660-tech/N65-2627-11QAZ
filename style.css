@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
+/* =========================================================
+   KO'K DIZAYN (standart). Saytga kirganda shu dizayn ochiladi.
+   Qorong'u dizayn: dark.css
+   ========================================================= */
+
 :root {
     --navy: #142b4a;
     --blue: #2864a8;
@@ -76,6 +81,7 @@ button {
 
 nav {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
@@ -92,6 +98,23 @@ nav {
 .nav-link.active {
     color: var(--blue);
     background: var(--sky);
+}
+
+/* Dizayn almashtirish tugmasi */
+.theme-toggle {
+    border: 1px solid var(--line);
+    background: var(--sky);
+    color: var(--blue);
+    padding: 11px 15px;
+    border-radius: 9px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+.theme-toggle:hover {
+    background: var(--blue);
+    color: white;
 }
 
 .menu-toggle {
@@ -138,9 +161,13 @@ nav {
 
 .hero {
     min-height: 480px;
-    /*background: linear-gradient(120deg, #142b4a, #2864a8, #3479b7);*/
-    background-image: url("back1.png");
+    /* back1.png bo'lmasa, gradient ko'rinadi */
+    background-color: #2864a8;
+    background-image:
+        url("back1.png"),
+        linear-gradient(120deg, #142b4a, #2864a8, #3479b7);
     background-size: cover;
+    background-position: center;
     color: white;
     padding: 70px max(6vw, calc((100% - 1160px) / 2));
     display: flex;
@@ -544,6 +571,92 @@ nav {
 }
 
 
+/* VIDEO */
+
+.video-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: rgba(20, 43, 74, .85);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.video-item {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(23,55,91,.06);
+}
+
+.video-card {
+    padding: 0;
+    text-align: left;
+    color: var(--ink);
+    transition: .2s;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(23,55,91,.14);
+}
+
+.video-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(120deg, #142b4a, #2864a8);
+    overflow: hidden;
+}
+
+.video-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding-left: 4px;
+    font-size: 24px;
+    color: var(--navy);
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 8px 25px rgba(0,0,0,.3);
+    transition: .2s;
+}
+
+.video-card:hover .video-play {
+    transform: scale(1.1);
+}
+
+.video-item p {
+    margin: 0;
+    padding: 14px 16px;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+
 /* MUALLIMLAR */
 
 .teacher-grid {
@@ -605,6 +718,12 @@ nav {
 
 .footer h3 {
     margin: 0;
+}
+
+.footer h2 {
+    margin: 0;
+    font-size: 15px;
+    color: #a9d5ff;
 }
 
 .footer p,
@@ -685,6 +804,7 @@ nav {
         background: white;
         padding: 12px 20px;
         flex-direction: column;
+        align-items: stretch;
         border-bottom: 1px solid var(--line);
     }
 
@@ -692,7 +812,8 @@ nav {
         display: flex;
     }
 
-    .nav-link {
+    .nav-link,
+    .theme-toggle {
         text-align: left;
     }
 
@@ -716,7 +837,8 @@ nav {
         padding: 50px 0;
     }
 
-    .feature-grid {
+    .feature-grid,
+    .video-grid {
         grid-template-columns: 1fr;
     }
 
@@ -744,8 +866,7 @@ nav {
         margin: auto;
     }
 
-    .profile-sections,
-    .teacher-grid {
+    .profile-sections {
         grid-template-columns: 1fr;
     }
 
@@ -758,16 +879,7 @@ nav {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-/* ===== QO'SHIMCHA RESPONSIVE (yangi) ===== */
-/* TELEFONDA USTOZLAR: bir qatorda 2 tadan */
-@media (max-width: 680px) {
+    /* Telefonda ustozlar: bir qatorda 2 tadan */
     .teacher-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -791,6 +903,11 @@ nav {
         font-size: 14px;
         line-height: 1.3;
         margin: 6px 0 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
