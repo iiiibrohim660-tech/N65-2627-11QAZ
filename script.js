@@ -4,9 +4,9 @@
 const studentNames = [
     "Abdimalikova Mohinur",
     "Abdimavlanov Muhammadali",
-    "Abdukarimova Rayhon",
+    "dytfugyhijo; d6ft7y8u9p",
     "Abdumannatov Lazizbek",
-    "Baratov Jahongir",
+    "zZEsgrdtfygukihop'kjh;glfkcjxxzhxgjkl",
     "Irsmuhamadov Abdishukur",
     "Madrahimov Shohmalik",
     "Mominjanova Guldona",
@@ -36,21 +36,21 @@ const studentNames = [
 */
 
 const photoCounts = {
-    1: 6,
-    2: 6,
-    3: 6,
-    4: 6,
-    5: 6,
-    6: 6,
-    7: 6,
-    8: 6,
-    9: 6,
-    10: 6,
-    11: 6,
-    12: 6,
-    13: 6,
-    14: 6,
-    15: 6
+    1: 26,
+    2: 26,
+    3: 26,
+    4: 26,
+    5: 26,
+    6: 26,
+    7: 26,
+    8: 26,
+    9: 26,
+    10: 26,
+    11: 26,
+    12: 26,
+    13: 26,
+    14: 26,
+    15: 26
 };
 
 
@@ -62,15 +62,15 @@ const photoCounts = {
 const studentInfo = {
 
     1: {
-        about: "Men Abdimalikova Mohinur 2010 yil iyunning 28-sanasida tug'ilganman.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Matematika",
-        hobbies: "Kitob o‘qish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     2: {
@@ -86,15 +86,15 @@ const studentInfo = {
     },
 
     3: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Ingliz tili",
-        hobbies: "Rasm chizish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     4: {
@@ -146,15 +146,15 @@ const studentInfo = {
     },
 
     8: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Ona tili",
-        hobbies: "Rasm chizish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     9: {
@@ -170,27 +170,27 @@ const studentInfo = {
     },
 
     10: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Kimyo",
-        hobbies: "Kitob o‘qish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     11: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Ingliz tili",
-        hobbies: "Musiqa",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     12: {
@@ -206,39 +206,39 @@ const studentInfo = {
     },
 
     13: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Adabiyot",
-        hobbies: "Kitob o‘qish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     14: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Matematika",
-        hobbies: "Sport",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     },
 
     15: {
-        about: "Men haqimda ma’lumot.",
-        interests: "Qiziqishlarim.",
-        favoriteSubject: "Ingliz tili",
-        hobbies: "Rasm chizish",
-        achievements: "Yutuqlarim.",
-        career: "Kelajakdagi kasbim.",
-        dream: "Orzularim.",
-        goal: "Maqsadlarim.",
-        memories: "Xotiralarim."
+        about: "?",
+        interests: "?",
+        favoriteSubject: "?",
+        hobbies: "?",
+        achievements: "?",
+        career: "?",
+        dream: "?",
+        goal: "?",
+        memories: "?"
     }
 
 };
@@ -265,7 +265,7 @@ const students = studentNames.map((name, index) => ({
 (function () {
     // Asosiy suratlar (20 ta). Yangisini qo'shish uchun bitta qator qo'shing.
     const classmates = [
-        { photo: "sinf1.png",  title: "8-Mart bayrami" },
+        { photo: "sinf1.png",  title: "Charosni Kutib Olish" },
         { photo: "sinf2.png",  title: "Yangi yil 2027" },
         { photo: "sinf3.png",  title: "Sinf xonasida" },
         { photo: "sinf4.png",  title: "Sayohat vaqtida" },
